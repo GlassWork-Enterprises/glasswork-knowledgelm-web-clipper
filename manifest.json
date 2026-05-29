@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "KnowledgeLM Web Clipper",
+  "version": "0.1.0",
+  "description": "Capture the current page, selection, and page context into a GlassWork KnowledgeLM project.",
+  "permissions": ["activeTab", "storage", "tabs", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Save to KnowledgeLM",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "save-selection-to-knowledgelm": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Capture the current page into KnowledgeLM"
+    }
+  }
+}

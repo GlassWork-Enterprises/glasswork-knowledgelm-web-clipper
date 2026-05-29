@@ -1,0 +1,18 @@
+{
+  "id": "knowledgelm-web-clipper",
+  "name": "KnowledgeLM Web Clipper",
+  "summary": "Browser extension that sends captured pages into GlassWork through the glasswork:// deep link.",
+  "version": "0.1.0",
+  "status": "available_now",
+  "runtime": "browser_extension",
+  "settingsKey": null,
+  "source": {
+    "type": "github",
+    "url": "https://github.com/GlassWork-Enterprises/glasswork-knowledgelm-web-clipper"
+  },
+  "cost": "Manual browser installation during alpha.",
+  "hotReload": "Reload from the browser's extension page; the desktop app only receives deep links.",
+  "hooks": ["knowledge_capture"],
+  "promptFragments": [],
+  "tools": []
+}
